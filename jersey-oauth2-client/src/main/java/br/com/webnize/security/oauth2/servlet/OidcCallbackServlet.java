@@ -1,4 +1,4 @@
-package techne.web.security.oauth2.servlet;
+package br.com.webnize.security.oauth2.servlet;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -17,15 +17,15 @@ import org.codehaus.jettison.json.JSONObject;
 import org.glassfish.jersey.client.oauth2.OAuth2CodeGrantFlow;
 import org.glassfish.jersey.client.oauth2.TokenResult;
 
-import techne.web.security.oauth2.util.JAASCredentials;
-import techne.web.security.oauth2.util.OAuth2Util;
+import br.com.webnize.security.oauth2.util.JAASCredentials;
+import br.com.webnize.security.oauth2.util.OAuth2Util;
 
 /**
  * Servlet para Callback de autenticação (Code Grant Flow) que pode ser declarada
  * no descritor da aplicação (web.xml) ou ainda extendida por uma classe anotada
  * com <code>@WebServlet</code>.
  *
- * @author Techne
+ * @author reginaldo.santos
  * @version 1.0
  * @since 27/11/2015
  */
@@ -46,9 +46,6 @@ public class OidcCallbackServlet extends HttpServlet {
 
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-//  HttpSession session = request.getSession();
-//  TechnePrincipal principal = (TechnePrincipal) session.getAttribute(OAuth2Util.OIDC_USER);
 
     Principal principal = request.getUserPrincipal();
 
@@ -104,29 +101,7 @@ public class OidcCallbackServlet extends HttpServlet {
 
     logger.finest(String.format("Username: ", userInfo.getString("name")));
 
-//    try {
-//      ISecurityConnection cn = SecurityConnection.open(Globals.SECURITY_CONNECTION_CLASS);
-//
-//      try {
-//        principal = cn.authenticate(user, password);
-//        cn.commit();
-//      }
-//      catch(AccountNotFoundException e) {
-//        /*
-//         * Ao tentar autenticar via JAAS um usuário não existente, não mostra o stack no log,
-//         * mostra somente uma INFO normal - evita poluir o log com informações desnecessárias.
-//         */
-//        log.info(e.getMessage());
-//      }
-//      catch(ApplicationNotFoundException e) {
-//        log.warning(e.getMessage());
-//      }
-//      finally {
-//        cn.close();
-//      }
-//    }
-
-    return new JAASCredentials("techne", "techne");
+    return new JAASCredentials("reginaldo.santos", "password");
   }
 
 }

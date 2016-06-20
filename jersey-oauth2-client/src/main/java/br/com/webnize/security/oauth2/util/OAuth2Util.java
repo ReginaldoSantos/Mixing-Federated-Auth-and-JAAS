@@ -1,4 +1,4 @@
-package techne.web.security.oauth2.util;
+package br.com.webnize.security.oauth2.util;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -15,7 +15,7 @@ import org.codehaus.jettison.json.JSONObject;
 
 /**
  *
- * @author Techne
+ * @author reginaldo.santos
  * @version 1.0
  * @since 17/05/2016
  */

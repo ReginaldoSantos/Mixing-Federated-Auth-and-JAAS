@@ -1,4 +1,4 @@
-package techne.web.security.oauth2.servlet;
+package br.com.webnize.security.oauth2.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,12 +22,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 
-import techne.web.security.oauth2.util.AuthConfig;
+import br.com.webnize.security.oauth2.util.AuthConfig;
 
 
 /**
  *
- * @author Techne
+ * @author reginaldo.santos
  * @version 1.0
  * @since 17/05/2016
  */

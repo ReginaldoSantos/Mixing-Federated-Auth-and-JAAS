@@ -3,11 +3,11 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>br.com.techne</groupId>
-  <artifactId>cronos-oauth2-client</artifactId>
+  <groupId>br.com.webnize</groupId>
+  <artifactId>jersey-oauth2-client</artifactId>
   <version>1.0.0</version>
-  <packaging>${cronos-oauth2-client.packaging}</packaging>
-  <name>cronos-oauth2-client</name>
+  <packaging>${jersey-oauth2-client.packaging}</packaging>
+  <name>jersey-oauth2-client</name>
 
   <properties>
     <!-- Encoding padrão utilizado em todo fonte -->
@@ -31,7 +31,7 @@
     <maven-war-plugin.version>2.6</maven-war-plugin.version>
     <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
 
-    <cronos-oauth2-client.packaging>war</cronos-oauth2-client.packaging>
+    <jersey-oauth2-client.packaging>war</jersey-oauth2-client.packaging>
   </properties>
 
   <dependencies>
@@ -81,17 +81,13 @@
 
       <!--
 
-        Profile padrão utilizado para rodar biblioteca como aplicação web para testes standalone e para overlay no cronos-web:
+        Default Profile for running as web app:
 
         $ mvn clean tomcat7:run
 
-        Para ver mais logs:
+        Debug options:
 
-        $ mvn clean tomcat7:run -Djava.util.logging.config.file=../techne-appteste/servers/config/logging.properties
-
-        Ou ainda:
-
-        mvnDebug clean tomcat7:run -Djava.util.logging.config.file=../techne-appteste/servers/config/logging.properties
+        mvnDebug clean tomcat7:run -Djava.util.logging.config.file=<logging.properties>
 
       -->
 
@@ -102,7 +98,7 @@
      </activation>
 
      <properties>
-       <cronos-oauth2-client.packaging>war</cronos-oauth2-client.packaging>
+       <jersey-oauth2-client.packaging>war</jersey-oauth2-client.packaging>
      </properties>
 
      <build>
@@ -149,8 +145,7 @@
 
       <!--
 
-        Profile utilizado para gerar um entregável cronos-oauth2-client.jar
-        que pode ser utilizado por outra aplicação sem CronosFramework:
+        Jar Profile: generates jersey-oauth2-client.jar
 
         $ mvn clean install -Pjar
 
@@ -159,7 +154,7 @@
       <id>jar</id>
 
       <properties>
-        <cronos-oauth2-client.packaging>jar</cronos-oauth2-client.packaging>
+        <jersey-oauth2-client.packaging>jar</jersey-oauth2-client.packaging>
       </properties>
 
       <build>
@@ -167,7 +162,7 @@
         <finalName>${project.artifactId}-${project.version}</finalName>
 
         <!--
-          [provider].properties deve ser da aplicação.
+          [provider].properties must be from app.
          -->
         <resources>
           <resource>
@@ -192,7 +187,6 @@
         </plugins>
       </build>
     </profile>
-
 
  </profiles>
 

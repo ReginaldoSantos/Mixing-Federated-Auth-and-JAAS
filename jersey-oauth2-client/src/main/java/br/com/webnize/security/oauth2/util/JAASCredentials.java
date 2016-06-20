@@ -1,13 +1,12 @@
-package techne.web.security.oauth2.util;
+package br.com.webnize.security.oauth2.util;
 
 /**
- * Pojo para transferência interna (CronosFramework e Aplicação) das credenciais
- * do usuário no seu SecurityConnection provider.
+ * Pojo para transferência interna das credenciais do usuário.
  *
- * Necessário quando a autenticação é externa (Federated Authentication), mas a
- * autorização continua sendo interna via JAAS.
+ * Necessário quando a autenticação é externa (Federated Authentication),
+ * mas a autorização continua sendo interna via JAAS.
  *
- * @author Techne
+ * @author reginaldo.santos
  * @version 1.0
  * @since 17/05/2016
  */

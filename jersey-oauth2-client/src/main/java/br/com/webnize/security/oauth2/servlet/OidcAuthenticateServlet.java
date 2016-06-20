@@ -1,4 +1,4 @@
-package techne.web.security.oauth2.servlet;
+package br.com.webnize.security.oauth2.servlet;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -15,7 +15,7 @@ import org.glassfish.jersey.client.oauth2.OAuth2ClientSupport;
 import org.glassfish.jersey.client.oauth2.OAuth2CodeGrantFlow;
 import org.glassfish.jersey.client.oauth2.OAuth2CodeGrantFlow.Builder;
 
-import techne.web.security.oauth2.util.AuthConfig;
+import br.com.webnize.security.oauth2.util.AuthConfig;
 
 
 /**
@@ -29,7 +29,7 @@ import techne.web.security.oauth2.util.AuthConfig;
  *
  * Ex: http://localhost:8080/oauth2/authorize?idProvider=google
  *
- * @author Techne
+ * @author reginaldo.santos
  * @version 1.0
  * @since 17/05/2016
  */
@@ -56,9 +56,6 @@ public class OidcAuthenticateServlet extends HttpServlet {
   @Override
   public void service(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
-
-//    HttpSession session = request.getSession();
-//    TechnePrincipal principal = (TechnePrincipal) session.getAttribute(OAuth2Util.OIDC_USER);
 
     Principal principal = request.getUserPrincipal();
 

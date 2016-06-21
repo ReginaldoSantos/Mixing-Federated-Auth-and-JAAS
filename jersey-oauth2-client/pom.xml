@@ -21,6 +21,8 @@
     <!-- APIs de Teste -->
     <junit.version>4.11</junit.version>
 
+    <org.json.version>chargebee-1.0</org.json.version>
+
     <!-- Jersey: REST API -->
     <jersey.version>2.22.2</jersey.version>
 
@@ -35,6 +37,12 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>org.json</artifactId>
+      <version>${org.json.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.glassfish.jersey.security</groupId>

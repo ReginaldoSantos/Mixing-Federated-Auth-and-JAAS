@@ -44,9 +44,19 @@ JavaScript origins:  http://localhost:8080
 
 ## Running...
 
-TODO
+The command below will run this module inside Tomcat7
 
-#### EndPoints
+```
+$ mvn clean tomcat7:run
+```
+
+Then access 'http://localhost:8080/oauth2/authorize?idProvider=google'.
+
+*idProvider parameter allowed values are _facebook_, _azure_ and _google_*
+
+In the javadoc you can find how to bind your JAAS Realm in the callback of the identity provider.
+
+#### Protected EndPoints
 
 1. /oauth2/authorize
 2. /oauth2/callback
@@ -55,11 +65,11 @@ TODO
 
 ## TO DOs:
 
-1. [ ] Decouple from app implementation and make it self-contained;
+1. [X] Decouple from app implementation and make it self-contained;
 	
 2. [ ] Implement 'Require App Secret' on facebook;
 
-3. [ ] Finish documentation;
+3. [ ] Improve plugability of JAAS Realm and documentation;
 
 
 ## References
